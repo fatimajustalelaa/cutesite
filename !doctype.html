@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<title>اشش~~جاوب بس</title>
+<style>
+    body {
+        font-family: "Tahoma";
+        background: linear-gradient(135deg, #ffefff, #ffd6f5);
+        text-align: center;
+        padding: 40px;
+        direction: rtl;
+    }
+
+    .screen {
+        display: none;
+        padding: 25px;
+        margin: auto;
+        max-width: 350px;
+        background: white;
+        border-radius: 18px;
+        box-shadow: 0px 0px 15px #0002;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 12px;
+        background: #ff89c9;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        margin: 8px;
+    }
+
+    button:hover {
+        background: #ff6db7;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+
+/* صناديق الصفحات تصير كيوت أكثر */
+.screen {
+    background: #ffffffdd;
+    border: 2px solid #ffb6e6;
+    box-shadow: 0px 0px 15px #ffb6e655;
+    backdrop-filter: blur(4px);
+}
+/* خلفية صورة من اختيارج */
+body {
+    background: url(https://i.pinimg.com/736x/70/46/26/704626870426bd4c69ffc4614e44a217.jpg) center/cover no-repeat fixed;
+    font-family: "Tahoma";
+    text-align: center;
+    padding: 40px;
+    direction: rtl;
+    position: relative;
+    overflow: auto;
+}
+
+/* النص يبقى ثابت فوق القلوب */
+.text-overlay {
+    position: relative;
+    z-index: 10;
+    color: #d6298b;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* القلوب المتحركة */
+.floating {
+    position: absolute;
+    font-size: 35px;
+    animation: floatUp 5s infinite linear;
+    opacity: 0.75;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(80vh) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-20vh) scale(1.3); opacity: 0; }
+}
+
+
+</style>
+</head>
+<body>
+<div class="من فطيشهه">
+  </div>
+
+<!-- قلوب تتحرك.. انتِ دخلي الي يعجبج -->
+<span class="floating" style="left:10%; animation-delay:0s;">💗</span>
+<span class="floating" style="left:30%; animation-delay:1s;">💗</span>
+<span class="floating" style="left:50%; animation-delay:2s;">💗</span>
+<span class="floating" style="left:70%; animation-delay:3s;">💗</span>
+<span class="floating" style="left:85%; animation-delay:4s;">💗</span>
+
+
+<div id="screen1" class="screen" style="display:block;">
+    <h2>ساالووووو .... ويت انت محمدي ؟</h2>
+    <button id="yes1">يسسووو</button>
+    <button id="no1">نوو </button>
+</div>
+
+<!-- الصفحة الثانية -->
+<div id="screen2" class="screen">
+    <h2>ردت اقولك شغله …</h2>
+    <p>لوفف يوو 👈🏼👉🏼</p>
+    <button id="whatBtn">وشنو يعني !؟</button>
+    <button id="meTooBtn">اني هم❤️‍🩹!!!</button>
+</div>
+
+<!-- صفحة و يعني شنو -->
+<div id="screen3" class="screen">
+    <h2>يعني…</h2>
+    <img id="placeholderImg" src="https://i.pinimg.com/736x/3e/b8/4e/3eb84e67702e0aeef8eba8c0f0c9b4af.jpg"/>
+  
+  <button id="okBtn">!!وخررر</button>
+    <button id="cuteBtn">🫂</button>
+</div>
+
+<!-- صفحة اني هم -->
+<div id="screen4" class="screen">
+    <h2>افف يسس  😭💗</h2>
+<img id="placeholderImg" src="https://i.pinimg.com/736x/3e/b8/4e/3eb84e67702e0aeef8eba8c0f0c9b4af.jpg" />
+
+       <button id="mtGrid">🫂</button>
+</div>
+
+<!-- صفحة النهاية الحزينة -->
+<div id="finalSad" class="screen">
+    <h2>يححح تمام 💔</h2>
+<img id="placeholderImg" src="https://i.pinimg.com/736x/19/6a/4b/196a4b87bfe24bbb7dffd7a5a68746cc.jpg" />
+
+
+</div>
+
+<!-- صفحة الزواج 😭💍 -->
+<div id="finalMarried" class="screen"> 
+  <h2>افف....!</h2>
+  <p> خلاص يلا صرت لي 🤫❤️‍🩹</p>
+  
+ <img id="placeholderImg" src="https://i.pinimg.com/736x/37/c5/b2/37c5b28cbf10521db38a4825df75acdf.jpg" />
+</div>
+
+  <div id="fine" class="screen">
+    <h2>تمام 💔</h2>
+<p>تكدر تروح 💔</p>
+ <button id="fineb">🚶🏼‍♂️</button>
+</div>
+
+ <div id="wew" class="screen">
+    <h2>ههههههه حسبت حخليك تمشي ؟🤫</h2>
+<p>لوءهه يعمري </p>
+ <button id="wewb1">وخررررررررر </button>
+<button id="wewb2">يلاا هايهيه قبلت  </button>
+
+</div>
+
+<script>
+    function showScreen(id) {
+        document.querySelectorAll(".screen").forEach(s => s.style.display = "none");
+        document.getElementById(id).style.display = "block";
+    }
+
+    // الصفحة الأولى
+    document.getElementById("yes1").onclick = () => showScreen("screen2");
+    document.getElementById("no1").onclick = () => showScreen("finalSad");
+
+    // الصفحة الثانية
+    document.getElementById("whatBtn").onclick = () => showScreen("screen3");
+    document.getElementById("meTooBtn").onclick = () => showScreen("screen4");
+
+    // و يعني شنو
+    document.getElementById("okBtn").onclick = () => showScreen("fine");
+    document.getElementById("cuteBtn").onclick = () => showScreen("finalMarried");
+
+    // اني هم
+    document.getElementById("mtGrid").onclick = () => showScreen("finalMarried");
+
+ document.getElementById("fineb").onclick = () => showScreen("wew");
+ document.getElementById("wewb1").onclick = () => showScreen("finalSad");
+ document.getElementById("wewb2").onclick = () => showScreen("finalMarried");
+
+
+
+</script>
+
+</body>
+</html>
+
